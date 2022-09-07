@@ -1,0 +1,150 @@
+:root {
+  font-family: Poppins, Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #596475;
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: max-content; */
+  gap: 0.5rem;
+}
+
+.app-view {
+  padding: 2rem 1rem;
+}
+
+.password-form {
+  justify-self: start;
+  /* grid-column: 1 / 2; */
+  /* place-self: center; */
+  /* align-self: center; */
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #5DC08B;
+}
+
+h1 {
+  text-align: center;
+}
+
+label,input,button {
+  font-weight: 600;
+}
+
+input,
+button {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+}
+
+input {
+  color: #596475;
+  background-color: #E7E7E7;
+  transition: border-color 0.25s ease;
+  border: 2px solid transparent;
+}
+
+input:hover {
+  border-color: #5DC08B;
+}
+
+button {
+  cursor: pointer;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #8791A0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.25s ease;
+  border: none;
+}
+
+button:hover {
+  background-color: #596475;
+}
+
+button.action {
+  background-color: #5DC08B;
+}
+
+button.action:hover {
+  background-color: #53a97b;
+}
+
+
+fieldset {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+label {
+  min-width: 200px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #596475;
+  }
+
+  input,
+  button {
+    color: #ffffff;
+    background-color: #0f0f0f98;
+  }
+}
+ */
