@@ -8,13 +8,11 @@ specifiers:
   typescript: ^4.6.4
   vite: ^3.0.2
   vue: ^3.2.37
-  vue-toasted: ^1.1.28
   vue-tsc: ^0.40.0
 
 dependencies:
   '@tauri-apps/api': 1.0.2
   vue: 3.2.38
-  vue-toasted: 1.1.28
 
 devDependencies:
   '@tauri-apps/cli': 1.0.5
@@ -635,10 +633,6 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
-
-  /vue-toasted/1.1.28:
-    resolution: {integrity: sha512-UUzr5LX51UbbiROSGZ49GOgSzFxaMHK6L00JV8fir/CYNJCpIIvNZ5YmS4Qc8Y2+Z/4VVYRpeQL2UO0G800Raw==}
-    dev: false
 
   /vue-tsc/0.40.9_typescript@4.8.2:
     resolution: {integrity: sha512-GnfwngCgbUvFgs+vaPesrJB76yoX1W/DSQZqoQ+pArjZ9+EFCFkqMpihE1D8W5p/tgTCAAPr/3Sfz/jtTiYGaA==}

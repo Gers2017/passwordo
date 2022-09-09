@@ -37,8 +37,23 @@ body {
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: max-content; */
+  
   gap: 0.5rem;
+}
+
+/* On Desktop */
+@media only screen and (min-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* On Mobile */
+@media only screen and (max-width: 780px) {
+  .content {
+    grid-template-columns: 1fr;
+    place-content: center;
+  }
 }
 
 .app-view {
@@ -47,9 +62,6 @@ body {
 
 .password-form {
   justify-self: start;
-  /* grid-column: 1 / 2; */
-  /* place-self: center; */
-  /* align-self: center; */
 }
 
 a {
@@ -133,18 +145,3 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
 }
-
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    color: #f6f6f6;
-    background-color: #596475;
-  }
-
-  input,
-  button {
-    color: #ffffff;
-    background-color: #0f0f0f98;
-  }
-}
- */
