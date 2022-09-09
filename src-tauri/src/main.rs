@@ -22,7 +22,7 @@ fn gen_nonsense(length: usize, use_special: bool) -> String {
 
     bytes.shuffle(rng);
 
-    let mut bucket: Vec<u8> = (0..length)
+    let bucket: Vec<u8> = (0..length)
         .map(|_| {
             // bytes.choose(rng).unwrap().to_owned()
             let i = rng.gen_range(0..bytes.len());
@@ -32,8 +32,6 @@ fn gen_nonsense(length: usize, use_special: bool) -> String {
 
     String::from_utf8(bucket).unwrap_or(String::default())
 }
-
-const MIN_SIZE: usize = 12;
 
 fn gen_schemed(
     hash_length: usize,
@@ -55,7 +53,6 @@ fn gen_schemed(
 }
 
 fn get_random_bytes(size: usize) -> Vec<u8> {
-    let rng = &mut thread_rng();
     let bytes: Vec<u8> = (0..size).map(|_| random::<u8>()).collect();
     bytes
 }
@@ -87,13 +84,11 @@ fn generate_schemed_passwords(
     list_of_words: Vec<String>,
     use_special: bool,
 ) -> Vec<String> {
-    let mut words: Vec<String> = vec![];
-
-    if list_of_words.is_empty() {
-        words = get_words();
+    let mut words: Vec<String> = if list_of_words.is_empty() {
+        get_words()
     } else {
-        words = list_of_words;
-    }
+        list_of_words
+    };
 
     let res: Vec<String> = (0..amount)
         .map(|_| gen_schemed(hash_length, is_inverted, &mut words, use_special))
